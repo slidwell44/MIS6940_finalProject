@@ -1,6 +1,11 @@
+import uvicorn
+
+from src import app
+
+
 def main():
-    print("Hello World")
+    pass
 
 
 if __name__ == "__main__":
-    main()
+    uvicorn.run(app, host="0.0.0.0", port=8000)

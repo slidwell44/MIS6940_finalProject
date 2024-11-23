@@ -1,0 +1,85 @@
+<mxfile host="drawio-plugin" modified="2024-11-23T17:11:09.902Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" etag="q3u4M4mwvjA12D4na8sE" version="22.1.22" type="embed">
+  <diagram id="_ZkaUF0gKT15L9rX-87M" name="Page-1">
+    <mxGraphModel dx="1903" dy="871" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="35" value="OLAP" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeWidth=5;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="485" y="390" width="170" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="17" value="Data Sources" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeWidth=5;align=center;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="-150" y="230" width="170" height="510" as="geometry" />
+        </mxCell>
+        <mxCell id="16" value="Data Warehouse" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeWidth=5;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="180" y="230" width="170" height="510" as="geometry" />
+        </mxCell>
+        <mxCell id="3" value="MES (MSSQL + RavenDB)" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="-115" y="620" width="100" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="4" value="Quality (MSSQL)" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="-115" y="500" width="100" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="5" value="Teamcenter (MSSQL)" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="-115" y="380" width="100" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="6" value="SAP (HanaDB)" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="-115" y="260" width="100" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="7" value="CDC" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;strokeWidth=2;shape=mxgraph.arrows2.arrow;dy=0.6;dx=40;notch=0;" parent="1" vertex="1">
+          <mxGeometry x="55" y="630" width="100" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="8" value="Batch (Prefect)" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;strokeWidth=2;shape=mxgraph.arrows2.arrow;dy=0.6;dx=40;notch=0;" parent="1" vertex="1">
+          <mxGeometry x="55" y="510" width="100" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="9" value="Batch (Prefect)" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;strokeWidth=2;shape=mxgraph.arrows2.arrow;dy=0.6;dx=40;notch=0;" parent="1" vertex="1">
+          <mxGeometry x="55" y="390" width="100" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="11" value="SLT" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;strokeWidth=2;shape=mxgraph.arrows2.arrow;dy=0.6;dx=40;notch=0;" parent="1" vertex="1">
+          <mxGeometry x="55" y="270" width="100" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="12" value="MES&lt;br&gt;DW (MSSQL)" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="215" y="620" width="100" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="13" value="Quality&lt;br&gt;DW (MSSQL)" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="215" y="500" width="100" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="14" value="Teamcenter&lt;br&gt;DW (MSSQL)" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="215" y="380" width="100" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="15" value="SAP DW (MSSQL)" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="215" y="260" width="100" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="19" value="DuckDB" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" parent="1" vertex="1">
+          <mxGeometry x="520" y="455" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=none;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="530" y="635" as="sourcePoint" />
+            <mxPoint x="530" y="575" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="25" value="MQTT" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.direct_data;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="165" y="850" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="36" value="DLT" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;strokeWidth=2;shape=mxgraph.arrows2.arrow;dy=0.6;dx=40;notch=0;" vertex="1" parent="1">
+          <mxGeometry x="365" y="450" width="100" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="40" value="Events" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeWidth=5;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="130" y="800" width="170" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="43" value="SQL" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;strokeWidth=2;shape=mxgraph.arrows2.arrow;dy=0.6;dx=40;notch=0;" vertex="1" parent="1">
+          <mxGeometry x="670" y="450" width="100" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="46" value="Business Intelligence" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeWidth=5;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="790" y="390" width="170" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="47" value="Excel" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="815" y="500" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="49" value="Power BI" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="815" y="430" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
