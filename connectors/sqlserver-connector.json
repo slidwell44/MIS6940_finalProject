@@ -1,0 +1,17 @@
+{
+  "name": "sqlserver-connector",
+  "config": {
+    "connector.class": "io.debezium.connector.sqlserver.SqlServerConnector",
+    "tasks.max": "1",
+    "database.hostname": "host.docker.internal",
+    "database.port": "1433",
+    "database.user": "kafka_connect_user",
+    "database.password": "password",
+    "database.names": "ProjectSeminar",
+    "topic.prefix": "projectseminar-sqlserver",
+    "table.include.list": "dbo.WorkOrders",
+    "snapshot.mode": "initial",
+    "database.encrypt": "false",
+    "database.trustServerCertificate": "true"
+  }
+}
