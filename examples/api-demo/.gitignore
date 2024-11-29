@@ -1,0 +1,11 @@
+.idea
+.venv
+*.conf
+*.log
+*/__pycache__/
+__pycache__
+/.pyc/*
+*/*.pyc/*
+*build/
+*dist/
+*src/debug.log

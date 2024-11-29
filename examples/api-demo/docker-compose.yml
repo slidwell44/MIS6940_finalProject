@@ -1,0 +1,12 @@
+services:
+  engservfastapi:
+    build: .
+    container_name: engservfastapi
+    ports:
+      - "8081:8081"
+
+  engservapi-ravendb:
+    build: winexusreposrv.williams-int.com:8083/ravendb/ravendb
+    container_name: engservapi-ravendb
+    ports:
+      - "8082:8082"
