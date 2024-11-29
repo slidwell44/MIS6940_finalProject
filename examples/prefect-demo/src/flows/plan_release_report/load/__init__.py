@@ -1,0 +1,1 @@
+from .insert_latest_routings import insert_latest_routings
