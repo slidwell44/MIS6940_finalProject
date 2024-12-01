@@ -10,6 +10,7 @@ class WiDatabases(Enum):
     PRODHANASRV_ZWILLIAMS = ("prodhanasrv", "zwilliams", WiDialects.HANA, 30015)
     WITC14DBSRV_TC = ("witc14dbsrv", "tc", WiDialects.MSSQL, None)
     LOCALDB = ("DLTB693", "ProjectSeminar", WiDialects.MSSQL, None)
+    LOCALDW = ("DLTB693", "ProjectSeminar_DW", WiDialects.MSSQL, None)
 
     def __init__(self, host: str, database: str, dialect: WiDialects, port: Optional[int]):
         self._host = host
