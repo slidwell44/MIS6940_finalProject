@@ -29,11 +29,21 @@ BEGIN
 
         BEGIN TRANSACTION;
 
-        UPDATE dbo.Workorders
-        SET WorkorderNumber = COALESCE(@WorkorderNumber, WorkorderNumber),
-            Revision        = COALESCE(@Revision, Revision),
-            Quantity        = COALESCE(@Quantity, Quantity)
-        WHERE Id = @Id;
+        IF @WorkorderNumber IS NOT NULL
+            OR @Revision IS NOT NULL
+            OR @Quantity IS NOT NULL
+            BEGIN
+                UPDATE dbo.Workorders
+                SET WorkorderNumber = COALESCE(@WorkorderNumber, WorkorderNumber),
+                    Revision        = COALESCE(@Revision, Revision),
+                    Quantity        = COALESCE(@Quantity, Quantity)
+                WHERE Id = @Id;
+            END
+        ELSE
+            BEGIN
+                SET @ErrorMessage = N'All update parameters are null';
+                RAISERROR (@ErrorMessage, 16, 1);
+            END
 
         IF XACT_STATE() = 1 COMMIT TRANSACTION;
     END TRY
