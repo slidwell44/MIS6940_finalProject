@@ -1,5 +1,5 @@
-USE ProjectSeminar;
-GO
+-- USE ProjectSeminar;
+-- GO
 
 SET ANSI_NULLS ON
 GO

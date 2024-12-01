@@ -29,7 +29,6 @@ def convert_bytes_to_strings(records):
 
 class WorkOrderChangesProducer:
     def __init__(self):
-        self.last_lsn = None
         try:
             self.wikafka_manager = WiKafka()
             if self.wikafka_manager.kafka_producer is None:

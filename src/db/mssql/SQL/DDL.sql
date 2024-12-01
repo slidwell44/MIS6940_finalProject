@@ -1,5 +1,5 @@
-use ProjectSeminar
-go
+-- use ProjectSeminar
+-- go
 
 create table dbo.Workorders
 (
