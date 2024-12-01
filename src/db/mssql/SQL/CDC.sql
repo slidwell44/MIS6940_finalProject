@@ -20,3 +20,12 @@ EXEC sys.sp_cdc_disable_table
      @capture_instance = 'dbo_WorkOrders';
 GO
 
+IF OBJECT_ID('dbo.CDC_Process_Log', 'U') IS NULL
+    BEGIN
+        CREATE TABLE dbo.CDC_Process_Log
+        (
+            Process_Log_ID INT IDENTITY (1,1) PRIMARY KEY,
+            Last_LSN       BINARY(10),
+            Processed_Date DATETIME DEFAULT GETDATE()
+        );
+    END
