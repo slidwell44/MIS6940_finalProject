@@ -1,0 +1,28 @@
+<mxfile host="drawio-plugin" modified="2024-11-23T16:35:03.760Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" etag="W9KYXTYL4pZts6LwMyS8" version="22.1.22" type="embed">
+  <diagram id="23iRSUPoRavnBvh4doch" name="Page-1">
+    <mxGraphModel dx="895" dy="740" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" value="Lake Storage" style="rounded=0;whiteSpace=wrap;html=1;align=center;fontSize=14;fontStyle=1;labelBackgroundColor=none;fillColor=#182E3E;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="35" y="530" width="335" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="3" value="Data Formats" style="rounded=0;whiteSpace=wrap;html=1;align=center;fontSize=14;fontStyle=1;labelBackgroundColor=none;fillColor=#182E3E;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="35" y="426" width="335" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="4" value="Table formats" style="rounded=0;whiteSpace=wrap;html=1;align=center;fontSize=14;fontStyle=1;labelBackgroundColor=none;fillColor=#182E3E;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="35" y="320" width="335" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="5" value="Compute Engine" style="rounded=0;whiteSpace=wrap;html=1;align=center;fontSize=14;fontStyle=1;labelBackgroundColor=none;fillColor=#182E3E;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="35" y="220" width="165" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="6" value="Catalog" style="rounded=0;whiteSpace=wrap;html=1;align=center;fontSize=14;fontStyle=1;labelBackgroundColor=none;fillColor=#182E3E;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="200" y="220" width="170" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="7" value="Analytics" style="rounded=0;whiteSpace=wrap;html=1;align=center;fontSize=14;fontStyle=1;labelBackgroundColor=none;fillColor=#182E3E;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="35" y="120" width="335" height="90" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

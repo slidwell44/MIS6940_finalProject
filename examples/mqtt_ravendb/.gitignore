@@ -1,0 +1,17 @@
+src/topology_files
+.idea
+
+topology_files/*
+topology_files/fc90f86addc757c4002f6cf6191d4a0c.raven-topology
+
+# dont commit log files
+*.log
+responses.log
+subscriptions.log
+
+# dont commit private certs
+Certificate
+src/utils/hivemq/base/certs
+
+# don't need to commit word docx
+*.docx
