@@ -1,15 +1,24 @@
 import json
 import logging
-from typing import Optional
+from typing import Optional, List
 from uuid import UUID
 
+from IPython.core.payload import PayloadManager
 from confluent_kafka import Consumer, KafkaError
+from pyravendb.store.document_store import DocumentStore
 from sqlalchemy import text
 
 from src.db import get_connection, WiDatabases
 from src.wikafka import McpKafkaTopics
 
 logger = logging.getLogger(__name__)
+
+
+class RavenDbPayload:
+    def __init__(self, kafka_topic, kafka_topic_key, kafka_payload):
+        self.kafka_topic = kafka_topic
+        self.kafka_topic_key = kafka_topic_key
+        self.kafka_payload = kafka_payload
 
 
 class WorkorderChange:
@@ -92,6 +101,20 @@ class WorkOrderChangesConsumer:
         )
         self.consume_topic: McpKafkaTopics = McpKafkaTopics.WORKORDER.value.name
 
+        self.urls: List[str] = ["http://localhost:8080"]
+        self.db = "ProjectSeminar"
+        self.ravendb_store = DocumentStore(urls=self.urls, database=self.db)
+
+        try:
+            self.ravendb_store.initialize()
+
+            # noinspection PyProtectedMember
+            if not self.ravendb_store._initialize:
+                raise Exception("Failed to initialize the RavenDB store")
+        except Exception as e:
+            logger.error(f"RavenDB initialization failed: {e}")
+            raise
+
         self.start()
 
     def consume_kafka_workorder_stream(self):
@@ -132,6 +155,25 @@ class WorkOrderChangesConsumer:
                             quantity=quantity,
                         )
                         logger.info(f"Processed change: {change}")
+
+                        payload = RavenDbPayload(
+                            kafka_topic=topic,
+                            kafka_topic_key=key,
+                            kafka_payload=data,
+                        )
+                        
+                        with self.ravendb_store.open_session() as session:
+                            session.store(
+                                entity=payload,
+                                key=workorderid,
+                            )
+
+                            metadata = session.advanced.get_metadata_for(payload)
+                            metadata["@collection"] = "workorder-changes"
+
+                            session.save_changes()
+                            logger.debug(f"Stored {workordernumber} change in RavenDB")
+                            
                     except json.JSONDecodeError as jde:
                         logger.error(f"JSON decode error: {jde}")
                     except Exception as e:
